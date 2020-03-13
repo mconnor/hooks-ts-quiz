@@ -11,9 +11,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Features:
 
 - Custom Hooks using regexp to replace HTML entities in questions and answers.
-- display US/UK spelling discrepancies according to country code
-- Custom hook to shuffle questions.
-- limits fill-in answers requiring numbers to only numerical responses
+- Display US/UK spelling discrepancies according to country code
+- regEx search/replace for HTML entities
+- Custom hook to shuffle questions using Fisher-Yates Algorithm
+- Limit fill-in answers requiring numbers to only numerical responses
 
 
 ### Setup
