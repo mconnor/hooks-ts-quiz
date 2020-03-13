@@ -47,5 +47,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0"
-  }
+  },
+  "author": "Mike Connor <mike@cloudswing.info> (https://github.com/mconnor/)",
+  "license": "ISC"
 }
