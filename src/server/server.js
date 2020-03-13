@@ -8,7 +8,7 @@ const server = express();
 const port = 4000;
 
 
-const whitelist = ['http://zeit.co', 'https://hooks-ts-quiz-ink1kt0jq.now.sh','https://hooks-ts-quiz.mconnor.now.sh/','http://localhost:3000']
+const whitelist = ['https://hooks-ts-quiz-ink1kt0jq.now.sh','https://hooks-ts-quiz.mconnor.now.sh/','http://localhost:3000']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
