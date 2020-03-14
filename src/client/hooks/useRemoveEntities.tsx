@@ -10,6 +10,7 @@ function useRemoveEntities(copy:string){
             str = str.replace(/\b&#039;/g, '’');
             str = str.replace(/&quot;\b/g, '“');
             str = str.replace(/(\b|\.)&quot;/g, '”');
+            str = str.replace(/&quot;(?=\s)/g, '”');
             str = str.replace(/&amp;/g, '&');
             
             setCleanString(str);
