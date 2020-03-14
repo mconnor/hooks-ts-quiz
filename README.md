@@ -1,11 +1,14 @@
 # hooks-ts-quiz
 
+A Typescript in React exercise with Custom Hooks and some regEx logic.
+
 Features:
 
-- Custom Hooks using regexp to replace HTML entities in questions and answers.
+- React Hooks
+- Custom hook using regexp to replace HTML entities.
+- Custom hook to shuffle questions and answers.
 - display US/UK spelling discrepancies according to country code
-- Custom hook to shuffle questions.
-- limits fill-in answers requiring numbers to only numerical responses
+- limit fill-in answers requiring numbers to only numerical responses
 
 ## Setup
 
