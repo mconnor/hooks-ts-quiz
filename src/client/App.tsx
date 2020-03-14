@@ -61,7 +61,7 @@ export const App = ({ api, geoURL, headerTxt, eMailContact, devName, numOfQuesti
     useShuffleArray(quizDataArray);
 
 
-    useTitleInput('Lucid Quiz - Mike Connor');
+    useTitleInput('Trivia - Mike Connor');
 
     React.useEffect(() => {
         console.log('fetch geoAPI')
