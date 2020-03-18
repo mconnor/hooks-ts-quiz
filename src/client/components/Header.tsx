@@ -1,12 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import globalStyles from '../App.module.css'
 
 type Props = {
     txt: string;
 }
 
-const HeaderDiv = styled.div`
+const variants = {
+    open: { x: 0 },
+    closed: { x: "-100%" },
+}
+
+const HeaderDiv = styled(motion.div)`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +28,13 @@ const HeaderDiv = styled.div`
 
 const Header = ({ txt = 'Who Likes Trivia?' }: Props) => {
     return (
-        <HeaderDiv className={globalStyles.headerBg}>
+        <HeaderDiv 
+            className={globalStyles.headerBg}
+            variants={variants}
+            initial='closed'
+            animate='open'
+
+        >
             <h1>{txt.toUpperCase()}</h1>
             
         </HeaderDiv>

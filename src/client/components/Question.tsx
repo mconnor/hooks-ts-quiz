@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import AnsBoolean from './AnsBoolean'
 import AnsMult from './AnsMult';
 import AnsFillin from './AnsFillin'
@@ -30,7 +31,7 @@ type Props = {
 };
 
 
-const Qdiv = styled.div`
+const Qdiv = styled(motion.div)`
     width: 60%;
     border: 1px solid black;
     border-radius: 4px;
@@ -38,16 +39,21 @@ const Qdiv = styled.div`
 
 `;
 
-
+const variants = {
+    open: { x: 0 },
+    closed: { x: "100%" },
+}
 
 const Question = ({ quizObj, onSubmitAnswerToApp, country = "US" }: Props) => {
 
-    
     const q1 = useRemoveEntities(quizObj.question);
     const question = useEnglishAltSpelling(q1, country);
 
     return (
-        <Qdiv>
+        <Qdiv
+            variants={variants}
+            initial='closed'
+            animate='open'>
             <p>{question}</p>
             {quizObj &&
                 ((quizObj.type === QuestionTypes.MULT) ?
