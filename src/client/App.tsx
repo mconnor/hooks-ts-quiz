@@ -1,4 +1,5 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Question from './components/Question';
 import GameOver from './components/GameOver';
 import Header from './components/Header';
@@ -45,25 +46,25 @@ const QuizDiv = styled.div<QuizDivProps>`
 `;
 export const App = ({ api, geoURL, headerTxt, eMailContact, devName, numOfQuestions }: Props) => {
 
-    const [geoAPI] = React.useState(geoURL + process.env.REACT_APP_IP_DATA_API_KEY);
-    const [quizDataArray, setQuizDataArray] = React.useState<Array<QuizData>>([]);
-    const [gameOver, setGameOver] = React.useState(false);
-    const [isLoading, setIsLoading] = React.useState(true);
-    const [fetchError, setFetchError] = React.useState(false);
+    const [geoAPI] = useState(geoURL + process.env.REACT_APP_IP_DATA_API_KEY);
+    const [quizDataArray, setQuizDataArray] = useState<Array<QuizData>>([]);
+    const [gameOver, setGameOver] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
+    const [fetchError, setFetchError] = useState(false);
 
-    const [currQuestion, setCurrQuestion] = React.useState<QuizData>();
+    const [currQuestion, setCurrQuestion] = useState<QuizData>();
 
-    const [scoreCorrect, setScoreCorrect] = React.useState(0);
-    const [scoreWrong, setScoreWrong] = React.useState(0);
-    const [qCount, setQcount] = React.useState(0);
+    const [scoreCorrect, setScoreCorrect] = useState(0);
+    const [scoreWrong, setScoreWrong] = useState(0);
+    const [qCount, setQcount] = useState(0);
 
-    const [country, setCountry] = React.useState('US');
+    const [country, setCountry] = useState('US');
     useShuffleArray(quizDataArray);
 
 
     useTitleInput('Trivia - Mike Connor');
 
-    React.useEffect(() => {
+    useEffect(() => {
         console.log('fetch geoAPI')
         fetch(geoAPI)
             .then(data => data.json())
@@ -79,12 +80,11 @@ export const App = ({ api, geoURL, headerTxt, eMailContact, devName, numOfQuesti
 
     }, [geoAPI])
 
-    React.useEffect(() => {
+    useEffect(() => {
         setCurrQuestion(quizDataArray[qCount])
     }, [qCount, quizDataArray]);
 
-    React.useEffect(() => {
-        console.log('fetch')
+    useEffect(() => {
         fetch(api)
             .then(res => res.json())
             .then(data => {
@@ -97,11 +97,11 @@ export const App = ({ api, geoURL, headerTxt, eMailContact, devName, numOfQuesti
             })
     }, [api]);
 
-    React.useEffect(() => {
+    useEffect(() => {
         setCurrQuestion(quizDataArray[0])
     }, [quizDataArray]);
 
-    React.useEffect(() => {
+    useEffect(() => {
 
         console.log(`${scoreCorrect} correct,  ${scoreWrong} wrong.  ${numOfQuestions - (scoreCorrect + scoreWrong)} questions to go`)
         if ((scoreWrong + scoreCorrect) >= numOfQuestions) {
