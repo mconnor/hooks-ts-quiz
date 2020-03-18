@@ -45,9 +45,11 @@
       "last 1 safari version"
     ]
   },
+    "server": {
+      "nodePort": 8080
+    },
   "devDependencies": {
-    "concurrently": "^5.1.0",
-    "awk": "^1.0.0"
+    "@now/node": "^1.4.1",
   },
   "author": "Mike Connor <mike@cloudswing.info> (https://github.com/mconnor/)",
   "license": "ISC"
