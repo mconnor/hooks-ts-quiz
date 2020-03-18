@@ -26,6 +26,7 @@
     "url": "https://github.com/mconnor/hooks-ts-quiz"
   },
   "scripts": {
+    "deploy": "now $(awk '!/^#|^\\s*$/ { printf(\"-e %s \", $0)}' .env)",
     "start:server": "node ./src/server/server.js",
     "start:client": "react-scripts start",
     "start": "concurrently npm:start:client npm:start:server",
@@ -47,7 +48,8 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "awk": "^1.0.0"
   },
   "author": "Mike Connor <mike@cloudswing.info> (https://github.com/mconnor/)",
   "license": "ISC"

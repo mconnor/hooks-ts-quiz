@@ -1,11 +1,5 @@
 {
     "version": 2,
-    "builds": [{ "src": "index.js", "use": "@now/node-server" }],
-    "build": {
-        "env": {
-            "REACT_APP_IP_DATA_API_KEY": "@react_app_ipdata_api_key"
-          }
-    },
     "routes": [
         {
           "src": "/",

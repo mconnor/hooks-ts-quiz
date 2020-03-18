@@ -2113,6 +2113,11 @@ autoprefixer@^9.6.1:
     postcss "^7.0.26"
     postcss-value-parser "^4.0.2"
 
+awk@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/awk/-/awk-1.0.0.tgz#ef0293b144df081148f2d071dbb3b7bc0764188d"
+  integrity sha1-7wKTsUTfCBFI8tBx27O3vAdkGI0=
+
 aws-sign2@~0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.7.0.tgz#b46e890934a9591f2d2f6f86d7e6a9f1b3fe76a8"
