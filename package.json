@@ -49,7 +49,7 @@
       "nodePort": 8080
     },
   "devDependencies": {
-    "@now/node": "^1.4.1",
+    "@now/node": "^1.4.1"
   },
   "author": "Mike Connor <mike@cloudswing.info> (https://github.com/mconnor/)",
   "license": "ISC"
