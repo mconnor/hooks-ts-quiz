@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './client/App';
+import { App } from './App';
 
 ReactDOM.render(<App 
         api='https://gist.githubusercontent.com/mconnor/57fdef47f97e39741412215fa4d669c9/raw/c3453dcdcc571030cdaca1d6a475ba106f1933e8/politicalTrivia.json'

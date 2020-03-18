@@ -1,5 +1,5 @@
 {
-  "name": "hooks-typescrip-demo-quiz",
+  "name": "hooks-typescript-demo-quiz",
   "version": "0.1.0",
   "private": false,
   "description": "A simple quiz created with React hooks/typescript. Filters out HTML entities and displays UK/US spellings.",
@@ -12,8 +12,6 @@
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.0.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
     "framer-motion": "^1.9.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -27,10 +25,10 @@
   },
   "scripts": {
     "deploy": "now $(awk '!/^#|^\\s*$/ { printf(\"-e %s \", $0)}' .env)",
-    "start:server": "node ./src/server/server.js",
-    "start:client": "react-scripts start",
-    "start": "concurrently npm:start:client npm:start:server",
-    "build": "react-scripts build"
+    "dev": "BROWSER=none react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
