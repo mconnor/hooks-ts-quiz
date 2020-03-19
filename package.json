@@ -13,6 +13,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^5.0.1",
     "framer-motion": "^1.9.1",
+    "next": "^9.3.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
@@ -25,7 +26,7 @@
   },
   "scripts": {
     "deploy": "now $(awk '!/^#|^\\s*$/ { printf(\"-e %s \", $0)}' .env)",
-    "dev": "BROWSER=none react-scripts start",
+    "dev": "BROWSER=none react-scripts  start --port $PORT",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,9 +46,6 @@
       "last 1 safari version"
     ]
   },
-    "server": {
-      "nodePort": 8080
-    },
   "devDependencies": {
     "@now/node": "^1.4.1"
   },
