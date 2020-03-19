@@ -1,6 +1,6 @@
 {
     "env": {
-      "VARIABLE_NAME": "@react_app_ipdata_api_key"
+      "REACT_APP_IP_DATA_API_KEY": "@react_app_ipdata_api_key"
     }
   }
   
