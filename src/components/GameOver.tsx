@@ -25,7 +25,7 @@ const GameOver = ({ score, wrong, outOf, restart }: Props) => {
             <p>Correct: {score}</p>
             <p>Wrong: {wrong}</p>
             <p>Final Score: {Math.floor((score / outOf * 100))}%</p>
-            <button  onClick={restart}>Restart Quiz</button>
+            <button  onClick={()=>restart()}>Restart Quiz</button>
         </GameOverDiv>
     )
 }
