@@ -29,7 +29,7 @@ const Footer = ({ devName, email }: Props) => {
                 <a href={`mailto:${email}`}>by {devName}</a>
             </Button>
             <Button>
-                <a href={`https://github.com/mconnor/ui-code-assessment-quiz`}>code available on Github</a>
+                <a href={`https://github.com/mconnor/hooks-ts-quiz`}>code available on Github</a>
             </Button>
         </FooterDiv>
     )
