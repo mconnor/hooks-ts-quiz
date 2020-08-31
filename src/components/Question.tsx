@@ -40,7 +40,11 @@ const Qdiv = styled(motion.div)`
 `;
 
 const variants = {
-    open: { x: 0 },
+    open: {
+        x: 0, transition: {
+            delay: .2
+        }
+    },
     closed: { x: "100%" },
 }
 

@@ -1,6 +1,7 @@
 {
     "env": {
       "REACT_APP_IP_DATA_API_KEY": "@react_app_ipdata_api_key"
-    }
+    },
+    "version": 2
   }
   

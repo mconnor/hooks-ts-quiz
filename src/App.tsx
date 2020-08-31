@@ -45,9 +45,9 @@ const QuizDiv = styled.div<QuizDivProps>`
 `;
 export const App = ({ api, geoURL, headerTxt, eMailContact, devName, numOfQuestions }: Props) => {
 
-    const [geoAPI] = useState(geoURL + process.env.REACT_APP_IP_DATA_API_KEY);
+    const [geoAPI] = useState(geoURL);
     const [quizDataArray, setQuizDataArray] = useState<Array<QuizData>>([]);
-    const [gameOver, setGameOver] = useState(false);
+    const [gameOver, setGameOver] = useState(true);
     const [isLoading, setIsLoading] = useState(true);
     const [fetchError, setFetchError] = useState(false);
 

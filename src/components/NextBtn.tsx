@@ -6,8 +6,9 @@ type Props = {
     userDidAnswer: boolean;
 }
 
-const Button= styled.button`
-    
+
+const Button = styled.button`
+
 `;
 const WrapDiv = styled.div`
     display: flex;
@@ -19,9 +20,10 @@ const WrapDiv = styled.div`
 const NextBtn = ({userDidAnswer=false}:Props) => {
     return (
         <WrapDiv>
-            <Button type="submit" 
-                        value= "Next"
-                        disabled={!userDidAnswer}
+            <Button 
+                type="submit" 
+                value= "Next"
+                disabled={!userDidAnswer}
             >NEXT</Button>
         </WrapDiv>
     )
