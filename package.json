@@ -1,7 +1,6 @@
 {
   "name": "hooks-typescript-demo-quiz",
   "version": "0.1.0",
-  "private": false,
   "description": "A simple quiz created with React hooks/typescript. Filters out HTML entities and displays UK/US spellings.",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
