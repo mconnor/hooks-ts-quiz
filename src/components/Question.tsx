@@ -48,9 +48,9 @@ const variants = {
     closed: { x: "100%" },
 }
 
-const Question = ({ quizObj, onSubmitAnswerToApp, country = "US" }: Props) => {
+export default function Question ({ quizObj, onSubmitAnswerToApp, country = "US" }: Props): JSX.Element{
 
-    const q1 = useRemoveEntities(quizObj.question);
+    const q1 = useRemoveEntities(quizObj?.question);
     const question = useEnglishAltSpelling(q1, country);
 
     return (
@@ -59,8 +59,8 @@ const Question = ({ quizObj, onSubmitAnswerToApp, country = "US" }: Props) => {
             initial='closed'
             animate='open'>
             <p>{question}</p>
-            {quizObj &&
-                ((quizObj.type === QuestionTypes.MULT) ?
+            {
+                ((quizObj?.type === QuestionTypes.MULT) ?
                     <AnsMult
                         rightAnswer={quizObj.correct_answer}
                         wrongAnswers={quizObj.incorrect_answers}
@@ -81,5 +81,3 @@ const Question = ({ quizObj, onSubmitAnswerToApp, country = "US" }: Props) => {
     );
 };
 
-
-export default Question;
