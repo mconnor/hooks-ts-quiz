@@ -62,18 +62,18 @@ export default function Question ({ quizObj, onSubmitAnswerToApp, country = "US"
             {
                 ((quizObj?.type === QuestionTypes.MULT) ?
                     <AnsMult
-                        rightAnswer={quizObj.correct_answer}
-                        wrongAnswers={quizObj.incorrect_answers}
+                        rightAnswer={quizObj?.correct_answer}
+                        wrongAnswers={quizObj?.incorrect_answers}
                         onSubmitAnswer={onSubmitAnswerToApp}
                         country={country}
                     />
                     :
                     (quizObj.type === QuestionTypes.BOOL) ?
                         <AnsBoolean
-                            rightAnswer={quizObj.correct_answer}
+                            rightAnswer={quizObj?.correct_answer}
                             onSubmitAnswer={onSubmitAnswerToApp} /> :
                         <AnsFillin
-                            rightAnswer={quizObj.correct_answer}
+                            rightAnswer={quizObj?.correct_answer}
                             onSubmitAnswer={onSubmitAnswerToApp} />
                 )
             }
