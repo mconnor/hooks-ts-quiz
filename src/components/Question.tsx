@@ -68,7 +68,7 @@ export default function Question ({ quizObj, onSubmitAnswerToApp, country = "US"
                         country={country}
                     />
                     :
-                    (quizObj.type === QuestionTypes.BOOL) ?
+                    (quizObj?.type === QuestionTypes.BOOL) ?
                         <AnsBoolean
                             rightAnswer={quizObj?.correct_answer}
                             onSubmitAnswer={onSubmitAnswerToApp} /> :
